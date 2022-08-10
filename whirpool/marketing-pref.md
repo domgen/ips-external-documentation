@@ -2,32 +2,39 @@
 
 Update a Person Marketing Preferences [using D&G PersonId]
 
-**URL** : ``
+<!-- **URL** : `` -->
 
 **Method** : `PATCH`
 
 **Auth required** : YES
 
-**Permissions required** : None
+<!-- **Permissions required** : None -->
 
-**Data constraints** : `{
-personId:
-marketing {
-        post: boolean or null
-        email: boolean or null
-        telephone: boolean or null
-        sms: boolean or null
+**Data constraints** : 
+```
+{
+   "personId": string,
+   "marketing": {
+      "post": boolean or null
+      "email": boolean or null
+      "telephone": boolean or null
+      "sms": boolean or null
+    }
 }
-}
-`
+```
 
 ## Success Responses
 
 **Condition** : Person Marketing Preferences successfully updated.
 
-**Code** : `200 OK`
+**Code** : `204`
 
-**Content** : `{[]}`
+<!-- **Content** : 
+```
+{
+   "message": "OK"
+}
+``` -->
 
 ## Other Responses
 
@@ -35,10 +42,10 @@ marketing {
 
 **Code** : `404`
 
-**Content** : `{[]}`
+**Content** : `TBD`
 
-**Condition** : Update not successful.
+**Condition** : Update not successful (Bad Request).
 
-**Code** : `404`
+**Code** : `400`
 
-**Content** : `{[]}`
+**Content** : `TBD`
