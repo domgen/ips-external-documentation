@@ -11,6 +11,7 @@ Update a Person Marketing Preferences [using D&G PersonId]
 **Permissions required** : None
 
 **Data constraints** : `{
+country:
 personId:
 marketing {
         post: boolean or null
